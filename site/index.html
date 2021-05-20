@@ -19,6 +19,26 @@
       width: 100px;
       }
     </style>
+
+<style>
+.triangle-down {
+    width: 5px;
+    height: 8px;
+    border-left: 54px solid transparent;
+    border-right: 54px solid transparent;
+    border-top: 74px solid #f00;
+}
+</style>
+<style>
+.triangle-up {
+ width: 5px;
+    height: 8px;
+    border-left: 54px solid transparent;
+    border-right: 54px solid transparent;
+    border-bottom: 74px solid #f00;
+}
+</style>
+
   </head>
   <body>
     <h1>My First Website</h1>
@@ -48,66 +68,7 @@
       </tr>
     </table>
 
-    <br>
-    <table>
-    <tr>
-    <td colspan="5" style="text-align: right; font-size: 30px; background: #000; color: #fff; padding-left: 14px; padding-right: 14px;">
-      <span id="calculator-output"></span>
-      <div style="font-size: 12px;color: yellow;">Ans</div>
-    </td>
-    </tr>
-    <tr class="calculator-input">
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">1</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">2</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">3</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">÷</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;"><-</button></td>
-    </tr>
-    <tr class="calculator-input">
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">4</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">5</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">6</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">x</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">C</button></td>
-
-    </tr>
-    <tr class="calculator-input">
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">7</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">8</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">9</button></td>
-    <td style="font-size: 30px"><button style="width: 100%;height: 100%;">+</td>
-    <td rowspan="2" style="font-size: 30px"><button style="width: 100%;height: 100%;">=</button></td>
-    </tr>
-    <tr class="calculator-input">
-    <td colspan="2" style="font-size: 30px"><button style="width: 100%;height: 100%;">0</button></td>
-      <td style="font-size: 30px"><button style="width: 100%;height: 100%;">.</button></td>
-      <td style="font-size: 30px"><button style="width: 100%;height: 100%;">-</button></td>
-    </tr>
-    </table>
-    </br>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $(".calculator-input button").click(function(){
-          var old_string = $("#calculator-output").text()
-          var new_string = $(this).text()
-            if(new_string == "="){
-              var calculated_string = old_string.replace(/x/g, '*').replace(/÷/g, '/')
-              var complete_string = eval(calculated_string)
-            }else if(new_string == "C"){
-              var complete_string = "";
-            }else if(new_string == "<-"){
-              var complete_string = old_string.slice(0,-1)
-            }
-            else{
-              if(old_string.length <= 25){
-                var complete_string = old_string + new_string
-              }
-            }
-            $("#calculator-output").text(complete_string);
-        })
-      })
-    </script>
-  </body>
-</html> 
+    </body>
+    </html>
        
       
